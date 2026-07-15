@@ -12,9 +12,9 @@ const _spaceMono = Space_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Aryan Sharma - Founder & Product Builder",
+  title: "Aryan Kumar (@skylooperr) - Founder & Builder",
   description:
-    "Building innovative products solving real problems. From HydroxFlow (B2B2C water logistics) to cybersecurity. Venture-scale founder with proven execution.",
+    "Aryan Kumar, 14-year-old startup founder and product engineer. Founder of HydroxFlow. Winner of PitchPulse, IIT Delhi Blueprint, IIT Bombay Tatva. 13+ projects built. Building ventures that solve real problems.",
   generator: "v0.app",
   viewport: {
     width: "device-width",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
   icons: {
-    icon: "/icon.svg",
+    icon: "/favicon.png",
   },
 }
 

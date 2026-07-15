@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 import ProjectShowcase from "@/components/ProjectShowcase"
+import PremiumHero from "@/components/PremiumHero"
+import Achievements from "@/components/Achievements"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -86,54 +88,20 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Premium Hero Section */}
+      <PremiumHero />
+
       <div className="container">
-        {/* Hero Section */}
-        <section className="hero">
-          <div className="hero-content">
-            <p style={{ color: "var(--accent-retro)", marginBottom: "10px" }}>{"[ INITIALIZING PROTOCOL... ]"}</p>
-            <h1>
-              Developer <span>@skylooperr</span>
-            </h1>
-            <p>
-              Building pixel-perfect experiences with code. Crafting digital products that solve real problems. Retro vibes, modern tech.
-            </p>
-            <a href="#work" className="btn-retro">
-              EXPLORE PROJECTS
-            </a>
-          </div>
-          <div className="window-frame">
-            <div className="window-header">
-              <span>PROFILE.JPG</span>
-              <div className="window-controls">
-                <button className="window-btn" aria-label="Minimize">
-                  <span className="minimize-icon"></span>
-                </button>
-                <button className="window-btn" aria-label="Maximize">
-                  <span className="maximize-icon"></span>
-                </button>
-                <button className="window-btn window-close" aria-label="Close">
-                  <span className="close-icon"></span>
-                </button>
-              </div>
-            </div>
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1000258993-removebg-preview-removebg-preview-PdjlM748o7Ejyy64U50gNsvB0JZHVk.png"
-              alt="Aryan Kumar Portrait"
-              className="hero-image"
-              style={{ filter: "grayscale(100%) contrast(120%) drop-shadow(0 0 10px rgba(255, 77, 0, 0.3))" }}
-            />
-          </div>
-        </section>
 
         {/* Stats */}
         <div className="stats-bar">
           <div className="stat-item">
-            <div className="stat-val">10+</div>
+            <div className="stat-val">13+</div>
             <div className="stat-label">Projects Built</div>
           </div>
           <div className="stat-item">
-            <div className="stat-val">50+</div>
-            <div className="stat-label">Satisfied Users</div>
+            <div className="stat-val">3x</div>
+            <div className="stat-label">Competition Winner</div>
           </div>
           <div className="stat-item">
             <div className="stat-val">3</div>
@@ -200,7 +168,12 @@ export default function Home() {
             </span>
           </div>
         </section>
+      </div>
 
+      {/* Achievements Section */}
+      <Achievements />
+
+      <div className="container">
         {/* Footer */}
         <footer id="contact">
           <div className="footer-logo">
