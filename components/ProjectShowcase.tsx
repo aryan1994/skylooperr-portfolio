@@ -25,7 +25,7 @@ export const projects = [
     tech: ["React", "Next.js", "TypeScript", "Supabase", "TailwindCSS"],
     links: {
       website: "https://preview--hydroxflow.lovable.app",
-      github: "#",
+      github: "https://github.com/aryan1994/",
       caseStudy: "/projects/hydroxflow",
     },
     caseStudy: {
@@ -87,8 +87,8 @@ export const projects = [
     ],
     tech: ["Shopify", "Liquid", "TailwindCSS", "Figma"],
     links: {
-      website: "#",
-      github: "#",
+      website: "https://homiyo.store.shoopy.in/",
+      github: "https://github.com/aryan1994/",
       caseStudy: "/projects/homiyo",
     },
   },
@@ -108,8 +108,8 @@ export const projects = [
     ],
     tech: ["Next.js", "Framer Motion", "GSAP", "TailwindCSS", "Lenis"],
     links: {
-      website: "/",
-      github: "https://github.com",
+      website: "https://retro-brutalist-portfolio-mqqgyog4u-skylooperr-3727s-projects.vercel.app/",
+      github: "https://github.com/aryan1994/",
       caseStudy: "/projects/portfolio",
     },
   },
@@ -129,8 +129,8 @@ export const projects = [
     ],
     tech: ["Unity", "C#", "Blender", "PlayFab"],
     links: {
-      website: "#",
-      github: "#",
+      website: "https://skylooperr.itch.io/",
+      github: "https://github.com/aryan1994/",
       caseStudy: "/projects/games",
     },
   },
@@ -236,14 +236,14 @@ export default function ProjectShowcase() {
 
                 {/* CTA Buttons */}
                 <div className="project-actions">
-                  <a href={project.links.website} className="btn-cta btn-primary">
-                    Visit Website
+                  <a href={project.links.website} target="_blank" rel="noopener noreferrer" className="btn-cta btn-primary">
+                    Link
                   </a>
                   <a href={project.links.caseStudy} className="btn-cta btn-secondary">
                     Read Case Study
                   </a>
-                  {project.links.github !== "#" && (
-                    <a href={project.links.github} className="btn-cta btn-secondary">
+                  {project.links.github !== "https://github.com/aryan1994/" && (
+                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="btn-cta btn-secondary">
                       GitHub
                     </a>
                   )}

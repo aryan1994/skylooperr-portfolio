@@ -185,31 +185,32 @@ export default function Home() {
             </h2>
           </div>
           <div style={{ textAlign: "right" }}>
-            <div style={{ marginBottom: "20px" }}>
-              <a href="https://twitter.com" style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}>
-                TWITTER
+            <div style={{ marginBottom: "20px", display: "flex", gap: "15px", justifyContent: "flex-end" }}>
+              <a href="https://www.linkedin.com/in/skylooperr/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-primary)", textDecoration: "none", fontSize: "1.2rem" }} title="LinkedIn">
+                in
               </a>
-              <a href="https://github.com" style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}>
-                GITHUB
+              <a href="https://github.com/aryan1994/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-primary)", textDecoration: "none", fontSize: "1.2rem" }} title="GitHub">
+                ◇
               </a>
-              <a href="https://linkedin.com" style={{ color: "var(--text-primary)", textDecoration: "none", marginLeft: "20px" }}>
-                LINKEDIN
+              <a href="https://x.com/skylooperr" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-primary)", textDecoration: "none", fontSize: "1.2rem" }} title="X">
+                𝕏
+              </a>
+              <a href="https://www.reddit.com/u/skylooperr/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-primary)", textDecoration: "none", fontSize: "1.2rem" }} title="Reddit">
+                ⨀
+              </a>
+              <a href="https://www.instagram.com/skylooperr/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-primary)", textDecoration: "none", fontSize: "1.2rem" }} title="Instagram">
+                ◉
               </a>
             </div>
-            <p className="copyright">CRAFTED WITH CODE AND CAFFEINE. ALL RIGHTS RESERVED.</p>
+            <p className="copyright">@SKYLOOPERR 2025© - @SKYLOOPERR 2026</p>
           </div>
         </footer>
 
         <div className="footer-badge">
-          <a href="https://v0.app" target="_blank" rel="noopener noreferrer" className="badge-link-footer">
-            <div className="badge-content-footer">
-              <span className="badge-label">BUILT:</span>
-              <span className="badge-highlight">@skylooperr</span>
-              <span className="badge-separator">→</span>
-              <span className="badge-label">POWERED BY:</span>
-              <span className="badge-highlight">v0.app</span>
-            </div>
-          </a>
+          <div className="badge-content-footer">
+            <span className="badge-label">CREATED BY:</span>
+            <span className="badge-highlight">@skylooperr</span>
+          </div>
         </div>
       </div>
     </>
