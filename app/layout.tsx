@@ -1,42 +1,29 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono, Space_Mono, Syne } from "next/font/google"
+import { Inter, Space_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const _spaceMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-space-mono",
 })
-const _syne = Syne({
-  weight: ["400", "700", "800"],
-  subsets: ["latin"],
-  variable: "--font-syne",
-})
 
 export const metadata: Metadata = {
-  title: "System.Ref - Creative Developer & Designer",
-  description: "Architecting digital experiences through a lens of brutalist minimalism and retro-futurism.",
+  title: "Aryan Kumar (@skylooperr) - Founder & Builder",
+  description:
+    "Aryan Kumar, 14-year-old startup founder and product engineer. Founder of HydroxFlow. Winner of PitchPulse, IIT Delhi Blueprint, IIT Bombay Tatva. 13+ projects built. Building ventures that solve real problems.",
   generator: "v0.app",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  robots: "index, follow",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/favicon.png",
   },
 }
 
@@ -47,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${_spaceMono.variable} ${_syne.variable} font-sans antialiased`}>
+      <body className={`${_inter.variable} ${_spaceMono.variable} antialiased`}>
         {children}
         <Analytics />
       </body>
