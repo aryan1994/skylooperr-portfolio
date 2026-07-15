@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import ProjectShowcase from "@/components/ProjectShowcase"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -144,99 +145,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Portfolio */}
-        <section id="work">
-          <h2 className="section-title">Latest Projects</h2>
-          <div className="portfolio-grid">
-            {/* Project 1 */}
-            <div className="project-card">
-              <div className="window-header" style={{ background: "#333", color: "#fff" }}>
-                <span>PROJECT_ALPHA</span>
-                <div className="window-controls">
-                  <button className="window-btn" aria-label="Minimize">
-                    <span className="minimize-icon"></span>
-                  </button>
-                  <button className="window-btn" aria-label="Maximize">
-                    <span className="maximize-icon"></span>
-                  </button>
-                  <button className="window-btn window-close" aria-label="Close">
-                    <span className="close-icon"></span>
-                  </button>
-                </div>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80"
-                alt="Retro Tech"
-                className="project-img"
-              />
-              <div className="project-info">
-                <span className="project-tag">#WEB_DESIGN #UI_UX</span>
-                <h3 className="project-title">Vaporwave UI System</h3>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
-                  A complete design system inspired by 90s aesthetics with modern React functionality.
-                </p>
-              </div>
-            </div>
-            {/* Project 2 */}
-            <div className="project-card">
-              <div className="window-header" style={{ background: "#333", color: "#fff" }}>
-                <span>PROJECT_BETA</span>
-                <div className="window-controls">
-                  <button className="window-btn" aria-label="Minimize">
-                    <span className="minimize-icon"></span>
-                  </button>
-                  <button className="window-btn" aria-label="Maximize">
-                    <span className="maximize-icon"></span>
-                  </button>
-                  <button className="window-btn window-close" aria-label="Close">
-                    <span className="close-icon"></span>
-                  </button>
-                </div>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
-                alt="Coding"
-                className="project-img"
-              />
-              <div className="project-info">
-                <span className="project-tag">#DEVELOPMENT #WEB3</span>
-                <h3 className="project-title">Dashboard Pro</h3>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
-                  High-performance data visualization for enterprise applications.
-                </p>
-              </div>
-            </div>
-            {/* Project 3 */}
-            <div className="project-card">
-              <div className="window-header" style={{ background: "#333", color: "#fff" }}>
-                <span>PROJECT_GAMMA</span>
-                <div className="window-controls">
-                  <button className="window-btn" aria-label="Minimize">
-                    <span className="minimize-icon"></span>
-                  </button>
-                  <button className="window-btn" aria-label="Maximize">
-                    <span className="maximize-icon"></span>
-                  </button>
-                  <button className="window-btn window-close" aria-label="Close">
-                    <span className="close-icon"></span>
-                  </button>
-                </div>
-              </div>
-              <img
-                src="https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&q=80"
-                alt="Abstract Art"
-                className="project-img"
-              />
-              <div className="project-info">
-                <span className="project-tag">#BRANDING #IDENTITY</span>
-                <h3 className="project-title">Brand Archive</h3>
-                <p style={{ fontSize: "0.8rem", color: "var(--text-secondary)" }}>
-                  Reimagining brand identity through pixel art and retro design principles.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Premium Projects Showcase */}
+        <ProjectShowcase />
       </div>
 
       {/* Marquee */}
