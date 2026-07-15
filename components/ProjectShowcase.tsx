@@ -11,12 +11,13 @@ export const projects = [
   {
     id: 1,
     title: "HydroxFlow",
-    subtitle: "Building the Digital Infrastructure for India's Water Logistics",
+    subtitle: "India's First Digital Water Logistics Platform",
     category: "Startup • SaaS • Logistics",
     status: "Early Testing",
     description:
       "Modernizing India's fragmented water tanker industry with a transparent, technology-driven platform. Customers can book tankers online while operators manage operations through our comprehensive dashboard.",
     image: "https://images.unsplash.com/photo-1460925895917-adf4e565db40?w=1200&q=80",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1000257499-removebg-preview-cGRu3Mr3sNmhAtBQPdK3q6wwLNN0Jj.png",
     metrics: [
       { label: "Early Users", value: "39+" },
       { label: "Revenue", value: "₹9K+" },
@@ -80,6 +81,7 @@ export const projects = [
     description:
       "A complete home décor platform where I designed the user experience, branding, product pages, and visual identity from scratch. Focused on customer journey and conversion optimization.",
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yIO2DvoMnpzSI853ANKzdMuO8Y18m9.png",
     metrics: [
       { label: "Products", value: "500+" },
       { label: "Countries", value: "15+" },
@@ -101,6 +103,7 @@ export const projects = [
     description:
       "A premium personal portfolio combining storytelling, animations, and modern UI design. Built to create memorable experiences for recruiters, founders, and investors exploring my work.",
     image: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=1200&q=80",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portfolio-creative-text-banner-with-black-background-illustration_755074-98.jpg-2ntKF4oKEeypkwMKjKrQK3IQTrKPWX.avif",
     metrics: [
       { label: "Performance", value: "98/100" },
       { label: "Accessibility", value: "100/100" },
@@ -122,6 +125,7 @@ export const projects = [
     description:
       "A collection of Unity game prototypes exploring gameplay mechanics, physics systems, UI design, and rapid prototyping. This journey strengthened problem-solving skills and laid foundation for product engineering.",
     image: "https://images.unsplash.com/photo-1538481143235-5d630027f67e?w=1200&q=80",
+    logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-07-15%20at%202.10.44%E2%80%AFPM-vr6TdX5LKUqNH2WmEQePb5BaQvVaAI.png",
     metrics: [
       { label: "Projects", value: "8+" },
       { label: "Prototypes", value: "15+" },
@@ -206,6 +210,11 @@ export default function ProjectShowcase() {
 
               {/* Content */}
               <div className="project-content">
+                {project.logo && (
+                  <div className="project-logo-container">
+                    <img src={project.logo} alt={project.title} className="project-logo" />
+                  </div>
+                )}
                 <div className="project-meta">
                   <span className="project-category">{project.category}</span>
                   <span className="project-dot"></span>

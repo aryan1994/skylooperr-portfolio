@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import ProjectShowcase from "@/components/ProjectShowcase"
 import PremiumHero from "@/components/PremiumHero"
 import Achievements from "@/components/Achievements"
+import Skills from "@/components/Skills"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -82,7 +83,7 @@ export default function Home() {
             <a href="#work">PROJECTS</a>
             <a href="#lab">SKILLS</a>
             <a href="#archive">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="/contact">CONTACT</a>
           </nav>
           <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
         </div>
@@ -131,44 +132,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container">
-        {/* Skills Section */}
-        <section className="terminal-section" id="lab">
-          <div className="terminal-header">SKILLS_TERMINAL.EXE</div>
-          <div className="terminal-row">
-            <span className="prompt">{"skylooperr@dev:~$"}</span>
-            <span className="command">fetch skills --all</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">{"> Analyzing core competencies..."}</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">{"[████████████████] 100% - FRONTEND DEVELOPMENT"}</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">{"[████████████░░░░] 75% - UI/UX DESIGN"}</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">{"[██████████████░░] 85% - JAVASCRIPT/TYPESCRIPT"}</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">{"[█████████████░░░] 80% - REACT & NEXT.JS"}</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">{"[███████████░░░░░] 70% - CREATIVE CODING"}</span>
-          </div>
-          <div className="terminal-row">
-            <span className="prompt">{"skylooperr@dev:~$"}</span>
-            <span className="command">run contact_protocol.sh</span>
-          </div>
-          <div className="terminal-row">
-            <span className="output">
-              {"> Establishing secure connection... "}
-              <span className="cursor-blink">_</span>
-            </span>
-          </div>
-        </section>
-      </div>
+      {/* Skills Section */}
+      <Skills />
 
       {/* Achievements Section */}
       <Achievements />

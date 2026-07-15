@@ -110,14 +110,6 @@ export default function PremiumHero() {
     }),
   }
 
-  const metrics = [
-    { icon: "🏆", label: "Startup Winner", value: "3x Finalist" },
-    { icon: "🚀", label: "Founder", value: "HydroxFlow" },
-    { icon: "👥", label: "Early Users", value: "39+" },
-    { icon: "💰", label: "Revenue", value: "₹9K+" },
-    { icon: "💻", label: "Projects", value: "13+" },
-  ]
-
   return (
     <section ref={containerRef} className="relative w-full min-h-screen overflow-hidden bg-[#0d0d0d]">
       {/* Canvas background */}
@@ -229,23 +221,7 @@ export default function PremiumHero() {
         </motion.div>
       </div>
 
-      {/* Live Metrics */}
-      <motion.div
-        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 bg-[#1a1a1a] border border-[#333333] rounded-2xl p-8 backdrop-blur-md"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.8 }}
-      >
-        <div className="grid grid-cols-5 gap-8">
-          {metrics.map((metric, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl mb-2">{metric.icon}</div>
-              <div className="text-[#ff4d00] font-bold font-mono">{metric.value}</div>
-              <div className="text-xs text-[#999999] font-mono">{metric.label}</div>
-            </div>
-          ))}
-        </div>
-      </motion.div>
+
 
       {/* Scroll Indicator */}
       <motion.div
