@@ -5,8 +5,6 @@ import ProjectShowcase from "@/components/ProjectShowcase"
 import PremiumHero from "@/components/PremiumHero"
 import Achievements from "@/components/Achievements"
 import Skills from "@/components/Skills"
-import Openings from "@/components/Openings"
-import SKYBOT from "@/components/SKYBOT"
 import InteractiveCursor from "@/components/InteractiveCursor"
 
 export default function Home() {
@@ -77,7 +75,6 @@ export default function Home() {
   return (
     <>
       <InteractiveCursor />
-      <SKYBOT />
       {showScrollTop && (
         <button onClick={scrollToTop} className="scroll-to-top" aria-label="Scroll to top">
           <span className="scroll-arrow">↑</span>
@@ -92,6 +89,7 @@ export default function Home() {
             <a href="#lab">SKILLS</a>
             <a href="#archive">ABOUT</a>
             <a href="/contact">CONTACT</a>
+            <a href="/openings">OPENINGS</a>
             <a href="/ARYAN_RESUME.pdf" download style={{ background: "var(--accent-retro)", color: "var(--bg-color)", padding: "8px 16px", borderRadius: "4px", fontWeight: "700" }}>RESUME</a>
           </nav>
           <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
@@ -151,18 +149,13 @@ export default function Home() {
         <Achievements />
       </section>
 
-      {/* Openings Section */}
-      <Openings />
-
       <div className="container">
         {/* Footer */}
         <footer>
           <div className="footer-logo">
             <p style={{ color: "var(--accent-retro)", fontSize: "0.8rem", marginBottom: "10px" }}>END_OF_PAGE</p>
             <h2>
-              @SKYLOOPERR 2025©
-              <br />
-              -- @SKYLOOPERR 2026
+              @SKYLOOPERR 2026
             </h2>
           </div>
           <div style={{ textAlign: "right" }}>
@@ -183,7 +176,7 @@ export default function Home() {
                 ◉
               </a>
             </div>
-            <p className="copyright">@SKYLOOPERR 2025© - @SKYLOOPERR 2026</p>
+
           </div>
         </footer>
 

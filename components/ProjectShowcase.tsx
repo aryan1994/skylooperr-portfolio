@@ -16,7 +16,6 @@ export const projects = [
     status: "Early Testing",
     description:
       "Modernizing India's fragmented water tanker industry with a transparent, technology-driven platform. Customers can book tankers online while operators manage operations through our comprehensive dashboard.",
-    image: "https://images.unsplash.com/photo-1460925895917-adf4e565db40?w=1200&q=80",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1000257499-removebg-preview-cGRu3Mr3sNmhAtBQPdK3q6wwLNN0Jj.png",
     metrics: [
       { label: "Early Users", value: "39+" },
@@ -80,7 +79,6 @@ export const projects = [
     status: "Completed",
     description:
       "A complete home décor platform where I designed the user experience, branding, product pages, and visual identity from scratch. Focused on customer journey and conversion optimization.",
-    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=80",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yIO2DvoMnpzSI853ANKzdMuO8Y18m9.png",
     metrics: [
       { label: "Products", value: "500+" },
@@ -102,7 +100,6 @@ export const projects = [
     status: "Live",
     description:
       "A premium personal portfolio combining storytelling, animations, and modern UI design. Built to create memorable experiences for recruiters, founders, and investors exploring my work.",
-    image: "https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=1200&q=80",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/portfolio-creative-text-banner-with-black-background-illustration_755074-98.jpg-2ntKF4oKEeypkwMKjKrQK3IQTrKPWX.avif",
     metrics: [
       { label: "Performance", value: "98/100" },
@@ -124,7 +121,6 @@ export const projects = [
     status: "Completed",
     description:
       "A collection of Unity game prototypes exploring gameplay mechanics, physics systems, UI design, and rapid prototyping. This journey strengthened problem-solving skills and laid foundation for product engineering.",
-    image: "https://images.unsplash.com/photo-1538481143235-5d630027f67e?w=1200&q=80",
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-07-15%20at%202.10.44%E2%80%AFPM-vr6TdX5LKUqNH2WmEQePb5BaQvVaAI.png",
     metrics: [
       { label: "Projects", value: "8+" },
@@ -193,20 +189,6 @@ export default function ProjectShowcase() {
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
-              {/* Image Container */}
-              <div className="project-image-container">
-                <motion.img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-showcase-image"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.6 }}
-                />
-                <div className="project-overlay">
-                  <div className="project-status">{project.status}</div>
-                </div>
-              </div>
-
               {/* Content */}
               <div className="project-content">
                 {project.logo && (

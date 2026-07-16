@@ -200,22 +200,7 @@ export default function PremiumHero() {
                 />
               </div>
 
-              {/* Floating tech icons */}
-              {[
-                { icon: "⚡", pos: "top-10 -left-8" },
-                { icon: "🚀", pos: "top-1/2 -right-8" },
-                { icon: "💡", pos: "bottom-10 -left-6" },
-                { icon: "🔒", pos: "bottom-1/3 -right-10" },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className={`absolute ${item.pos} w-12 h-12 bg-[#1a1a1a] border border-[#ff4d00] rounded-lg flex items-center justify-center text-2xl`}
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 3, delay: i * 0.3, repeat: Infinity }}
-                >
-                  {item.icon}
-                </motion.div>
-              ))}
+
             </div>
           </motion.div>
         </motion.div>
@@ -223,17 +208,7 @@ export default function PremiumHero() {
 
 
 
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="text-[#ff4d00] font-mono text-sm">Scroll to explore</div>
-        <div className="w-6 h-10 border-2 border-[#ff4d00] rounded-full flex justify-center mt-2">
-          <motion.div className="w-1 h-2 bg-[#ff4d00] rounded-full" animate={{ y: [4, 12, 4] }} transition={{ duration: 2, repeat: Infinity }} />
-        </div>
-      </motion.div>
+
     </section>
   )
 }
