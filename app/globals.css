@@ -40,7 +40,7 @@
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    cursor: crosshair;
+    cursor: url('/cursor.png') 10 10, auto;
   }
 
   /* CRT scanline effect overlay */
@@ -54,6 +54,52 @@
     z-index: 9999;
     pointer-events: none;
   }
+}
+
+/* Custom cursor glow effect */
+.cursor-glow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--accent-retro);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  box-shadow: 0 0 20px var(--accent-retro), inset 0 0 20px rgba(255, 77, 0, 0.3);
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--accent-retro), inset 0 0 20px rgba(255, 77, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--accent-retro), inset 0 0 30px rgba(255, 77, 0, 0.5);
+  }
+}
+
+/* Cursor trail */
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-retro);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.6;
+  box-shadow: 0 0 10px var(--accent-retro);
+}
+
+/* Card 3D hover effect */
+.card-3d {
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: rotateX(5deg) rotateY(-5deg) translateZ(20px);
+  box-shadow: 0 20px 40px rgba(255, 77, 0, 0.3);
 }
 
 /* Retro portfolio styles */

@@ -65,89 +65,89 @@ export default function ContactPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Info */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
+            {/* Contact Info - Left */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div className="p-8 bg-[#1a1a1a] border border-[#333333] rounded-xl hover:border-[#ff4d00] transition-all">
-                <h3 className="text-xl font-bold text-white mb-4 font-mono flex items-center gap-2">
-                  <span className="text-2xl">✉️</span> Email
+                <h3 className="text-lg font-bold text-white mb-4 font-mono">
+                  EMAIL
                 </h3>
-                <a href="mailto:skylooperr@gmail.com" className="text-[#ff4d00] hover:underline text-lg">
+                <a href="mailto:skylooperr@gmail.com" className="text-[#ff4d00] hover:underline text-base">
                   skylooperr@gmail.com
                 </a>
               </div>
 
               <div className="p-8 bg-[#1a1a1a] border border-[#333333] rounded-xl hover:border-[#ff4d00] transition-all">
-                <h3 className="text-xl font-bold text-white mb-4 font-mono flex items-center gap-2">
-                  <span className="text-2xl">💼</span> LinkedIn
+                <h3 className="text-lg font-bold text-white mb-4 font-mono">
+                  LINKEDIN
                 </h3>
                 <a
                   href="https://www.linkedin.com/in/skylooperr/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ff4d00] hover:underline text-lg"
+                  className="text-[#ff4d00] hover:underline text-base"
                 >
                   linkedin.com/in/skylooperr
                 </a>
               </div>
 
               <div className="p-8 bg-[#1a1a1a] border border-[#333333] rounded-xl hover:border-[#ff4d00] transition-all">
-                <h3 className="text-xl font-bold text-white mb-4 font-mono flex items-center gap-2">
-                  <span className="text-2xl">📸</span> Instagram
+                <h3 className="text-lg font-bold text-white mb-4 font-mono">
+                  INSTAGRAM
                 </h3>
                 <a
                   href="https://www.instagram.com/skylooperr/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#ff4d00] hover:underline text-lg"
+                  className="text-[#ff4d00] hover:underline text-base"
                 >
                   @skylooperr
                 </a>
               </div>
 
               <div className="p-8 bg-gradient-to-br from-[#ff4d00] from-10% to-transparent rounded-xl">
-                <p className="text-black font-mono font-bold">
-                  ⚡ Best time to reach out: Weekdays 9 AM - 6 PM IST
+                <p className="text-black font-mono font-bold text-sm">
+                  Best time to reach: 9 AM - 6 PM IST (Weekdays)
                 </p>
               </div>
             </motion.div>
 
-            {/* Contact Form */}
-            <motion.div variants={itemVariants}>
-              <form onSubmit={handleSubmit} className="space-y-6 p-8 bg-[#1a1a1a] border border-[#333333] rounded-xl">
+            {/* Contact Form - Spanning 2 columns */}
+            <motion.div variants={itemVariants} className="lg:col-span-2">
+              <form onSubmit={handleSubmit} className="space-y-8 p-12 bg-[#1a1a1a] border border-[#333333] rounded-xl">
                 {/* Name Input */}
                 <div>
-                  <label className="block text-white font-mono font-bold mb-2">Your Name *</label>
+                  <label className="block text-white font-mono font-bold mb-3 text-lg">Your Name *</label>
                   <input
                     type="text"
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0d0d0d] border border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all"
+                    className="w-full px-6 py-4 text-lg bg-[#0d0d0d] border-2 border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all"
                     placeholder="Aryan Kumar"
                   />
                 </div>
 
                 {/* Email Input */}
                 <div>
-                  <label className="block text-white font-mono font-bold mb-2">Your Email *</label>
+                  <label className="block text-white font-mono font-bold mb-3 text-lg">Your Email *</label>
                   <input
                     type="email"
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0d0d0d] border border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all"
+                    className="w-full px-6 py-4 text-lg bg-[#0d0d0d] border-2 border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all"
                     placeholder="you@example.com"
                   />
                 </div>
 
                 {/* Category Select */}
                 <div>
-                  <label className="block text-white font-mono font-bold mb-2">What's this about? *</label>
+                  <label className="block text-white font-mono font-bold mb-3 text-lg">What's this about? *</label>
                   <select
                     value={formData.category}
                     onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-3 bg-[#0d0d0d] border border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all"
+                    className="w-full px-6 py-4 text-lg bg-[#0d0d0d] border-2 border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all"
                   >
                     <option value="contact">Contact Me</option>
                     <option value="work">Work With Us</option>
@@ -157,23 +157,23 @@ export default function ContactPage() {
 
                 {/* Message Input */}
                 <div>
-                  <label className="block text-white font-mono font-bold mb-2">Message *</label>
+                  <label className="block text-white font-mono font-bold mb-3 text-lg">Message *</label>
                   <textarea
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    rows={6}
-                    className="w-full px-4 py-3 bg-[#0d0d0d] border border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all resize-none"
+                    rows={10}
+                    className="w-full px-6 py-4 text-lg bg-[#0d0d0d] border-2 border-[#333333] rounded-lg text-white font-mono focus:border-[#ff4d00] focus:outline-none transition-all resize-none"
                     placeholder="Tell me about your project or idea..."
                   />
                 </div>
 
                 {/* Submit Button */}
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-[#ff4d00] text-[#0d0d0d] font-bold rounded-lg hover:shadow-[0_0_30px_rgba(255,77,0,0.4)] transition-all font-mono disabled:opacity-50"
+                  className="w-full px-8 py-5 text-xl bg-[#ff4d00] text-[#0d0d0d] font-bold rounded-lg hover:shadow-[0_0_30px_rgba(255,77,0,0.4)] transition-all font-mono disabled:opacity-50"
                   type="submit"
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}

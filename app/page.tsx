@@ -5,6 +5,9 @@ import ProjectShowcase from "@/components/ProjectShowcase"
 import PremiumHero from "@/components/PremiumHero"
 import Achievements from "@/components/Achievements"
 import Skills from "@/components/Skills"
+import Openings from "@/components/Openings"
+import SKYBOT from "@/components/SKYBOT"
+import InteractiveCursor from "@/components/InteractiveCursor"
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -37,7 +40,10 @@ export default function Home() {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate-slide-up")
-          entry.target.style.animationDelay = `${Array.from(entry.target.parentChildren || []).indexOf(entry.target) * 100}ms`
+          if (entry.target.parentElement) {
+            const index = Array.from(entry.target.parentElement.children).indexOf(entry.target)
+            entry.target.style.animationDelay = `${index * 100}ms`
+          }
         }
       })
     }, observerOptions)
@@ -70,6 +76,8 @@ export default function Home() {
 
   return (
     <>
+      <InteractiveCursor />
+      <SKYBOT />
       {showScrollTop && (
         <button onClick={scrollToTop} className="scroll-to-top" aria-label="Scroll to top">
           <span className="scroll-arrow">↑</span>
@@ -84,6 +92,7 @@ export default function Home() {
             <a href="#lab">SKILLS</a>
             <a href="#archive">ABOUT</a>
             <a href="/contact">CONTACT</a>
+            <a href="/ARYAN_RESUME.pdf" download style={{ background: "var(--accent-retro)", color: "var(--bg-color)", padding: "8px 16px", borderRadius: "4px", fontWeight: "700" }}>RESUME</a>
           </nav>
           <div className="system-status">SYS_UP: 24:12:05:08 | CPU: 12%</div>
         </div>
@@ -133,20 +142,27 @@ export default function Home() {
       </div>
 
       {/* Skills Section */}
-      <Skills />
+      <section id="lab">
+        <Skills />
+      </section>
 
       {/* Achievements Section */}
-      <Achievements />
+      <section id="archive">
+        <Achievements />
+      </section>
+
+      {/* Openings Section */}
+      <Openings />
 
       <div className="container">
         {/* Footer */}
-        <footer id="contact">
+        <footer>
           <div className="footer-logo">
             <p style={{ color: "var(--accent-retro)", fontSize: "0.8rem", marginBottom: "10px" }}>END_OF_PAGE</p>
             <h2>
-              @SKYLOOPERR
+              @SKYLOOPERR 2025©
               <br />
-              2025©
+              -- @SKYLOOPERR 2026
             </h2>
           </div>
           <div style={{ textAlign: "right" }}>

@@ -168,11 +168,10 @@ export default function ProjectShowcase() {
       <div className="container">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="projects-header"
         >
           <h2 className="section-title">FLAGSHIP PROJECTS</h2>
           <p className="projects-subtitle">
