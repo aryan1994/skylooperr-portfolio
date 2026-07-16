@@ -162,9 +162,13 @@ export default function PremiumHero() {
               <button className="px-8 py-4 border-2 border-[#ff4d00] text-[#ff4d00] font-bold rounded-lg hover:bg-[rgba(255,77,0,0.1)] transition-all font-mono">
                 View Projects
               </button>
-              <button className="px-8 py-4 border-2 border-[#999999] text-[#999999] font-bold rounded-lg hover:border-white hover:text-white transition-all font-mono">
+              <a
+                href="/ARYAN_RESUME.pdf"
+                download
+                className="px-8 py-4 border-2 border-[#999999] text-[#999999] font-bold rounded-lg hover:border-white hover:text-white transition-all font-mono inline-block text-center"
+              >
                 Download Resume
-              </button>
+              </a>
             </motion.div>
 
             {/* Social Links */}

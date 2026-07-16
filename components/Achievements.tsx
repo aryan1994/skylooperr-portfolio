@@ -13,7 +13,7 @@ export default function Achievements() {
 
   const achievements = [
     {
-      icon: "🏆",
+      icon: "AWARD",
       title: "Winner — PitchPulse Startup Competition",
       org: "Gujarat Law Society University",
       description: "Won among 10,000+ startup participants for HydroxFlow.",
@@ -21,7 +21,7 @@ export default function Achievements() {
       category: "National Competition",
     },
     {
-      icon: "🥈",
+      icon: "FINALIST",
       title: "Finalist — IIT Delhi EDC Blueprint",
       org: "Indian Institute of Technology Delhi",
       description: "Selected among 12,000+ entrepreneurs. Presented HydroxFlow to experienced founders and mentors.",
@@ -29,7 +29,7 @@ export default function Achievements() {
       category: "Entrepreneurship",
     },
     {
-      icon: "🥈",
+      icon: "FINALIST",
       title: "Finalist — IIT Bombay Tatva Enviropreneur",
       org: "Indian Institute of Technology Bombay",
       description: "Recognized for building technology addressing real-world infrastructure challenges.",
@@ -37,7 +37,7 @@ export default function Achievements() {
       category: "Environmental Tech",
     },
     {
-      icon: "⭐",
+      icon: "RECOGNITION",
       title: "Best Teen-Preneur Award",
       org: "Recognition Initiative",
       description: "Recognized for entrepreneurship, leadership, and innovation at a young age.",
@@ -45,7 +45,7 @@ export default function Achievements() {
       category: "Youth Leadership",
     },
     {
-      icon: "🤖",
+      icon: "TECHNICAL",
       title: "Youngest AI Automation & Web Developer",
       org: "Tech Recognition",
       description: "Recognition for early technical achievements and product development capabilities.",
@@ -53,7 +53,7 @@ export default function Achievements() {
       category: "Technical Excellence",
     },
     {
-      icon: "🌟",
+      icon: "FEATURED",
       title: "Featured by Unstop & Founder Ankit Aggarwal",
       org: "National Startup Initiatives",
       description: "Acknowledged through national startup platforms and recognized by industry leaders.",
@@ -147,7 +147,9 @@ export default function Achievements() {
 
                         <div className="relative z-10">
                           <div className="flex items-start gap-4 mb-4">
-                            <div className="text-4xl">{achievement.icon}</div>
+                            <div className="px-3 py-2 bg-[#ff4d00] text-[#0d0d0d] rounded font-mono text-xs font-bold whitespace-nowrap">
+                              {achievement.icon}
+                            </div>
                             <div className="inline-block px-3 py-1 bg-[rgba(255,77,0,0.1)] border border-[#ff4d00] rounded text-[#ff4d00] font-mono text-xs font-bold">
                               {achievement.category}
                             </div>

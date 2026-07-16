@@ -1,12 +1,27 @@
 "use client"
 
+import { motion } from "framer-motion"
+
 export default function OpeningsPage() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2, delayChildren: 0.3 },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  }
+
   return (
     <>
       <header>
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
           <div className="logo">ARYAN KUMAR</div>
-          <nav className="nav-links">
+          <nav className="nav-links" style={{ gap: "1.5rem" }}>
             <a href="/">HOME</a>
             <a href="/#work">PROJECTS</a>
             <a href="/#lab">SKILLS</a>
@@ -16,18 +31,18 @@ export default function OpeningsPage() {
         </div>
       </header>
 
-      <div className="container" style={{ paddingTop: "60px", paddingBottom: "60px" }}>
-        <div style={{ marginBottom: "80px", textAlign: "center" }}>
-          <h1 style={{ fontSize: "3rem", fontWeight: "800", textTransform: "uppercase", marginBottom: "20px" }}>
+      <div className="container w-full px-4 sm:px-6 lg:px-8" style={{ paddingTop: "40px", paddingBottom: "60px" }}>
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" style={{ marginBottom: "60px", textAlign: "center" }}>
+          <motion.h1 variants={itemVariants} style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: "800", textTransform: "uppercase", marginBottom: "20px" }}>
             We Are Hiring
-          </h1>
-          <p style={{ fontSize: "1.1rem", color: "var(--text-secondary)", maxWidth: "700px", margin: "0 auto" }}>
+          </motion.h1>
+          <motion.p variants={itemVariants} style={{ fontSize: "clamp(0.95rem, 2vw, 1.1rem)", color: "var(--text-secondary)", maxWidth: "700px", margin: "0 auto", padding: "0 1rem" }}>
             Join HydroxFlow and help revolutionize India's water logistics industry. We are looking for talented individuals ready to make an impact.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Pamphlet Image - Full Width Display */}
-        <div style={{ marginBottom: "60px", maxWidth: "100%", overflow: "auto" }}>
+        <motion.div variants={itemVariants} style={{ marginBottom: "40px", maxWidth: "100%", overflow: "hidden" }}>
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BD-AZg2F5sSGoOKh8lmq0lFfkkj1Z9SqQ.png"
             alt="Business Development Internship - HydroxFlow"
@@ -38,19 +53,19 @@ export default function OpeningsPage() {
               objectFit: "contain",
               border: "2px solid var(--border-color)",
               borderRadius: "12px",
-              padding: "20px",
+              padding: "10px",
               background: "var(--surface)",
             }}
           />
-        </div>
+        </motion.div>
 
         {/* Position Details */}
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div style={{ background: "var(--surface)", border: "2px solid var(--border-color)", padding: "40px", borderRadius: "12px" }}>
-            <h2 style={{ fontSize: "2rem", fontWeight: "800", marginBottom: "30px" }}>Business Development Intern</h2>
+        <motion.div variants={itemVariants} style={{ maxWidth: "900px", margin: "0 auto", width: "100%", padding: "0 1rem" }}>
+          <div style={{ background: "var(--surface)", border: "2px solid var(--border-color)", padding: "clamp(1.5rem, 5vw, 40px)", borderRadius: "12px" }}>
+            <h2 style={{ fontSize: "clamp(1.5rem, 4vw, 2rem)", fontWeight: "800", marginBottom: "30px" }}>Business Development Intern</h2>
 
             <div style={{ marginBottom: "40px" }}>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: "700", marginBottom: "15px", color: "var(--accent-retro)", textTransform: "uppercase" }}>
+              <h3 style={{ fontSize: "clamp(1rem, 2vw, 1.2rem)", fontWeight: "700", marginBottom: "15px", color: "var(--accent-retro)", textTransform: "uppercase" }}>
                 Position Details
               </h3>
               <p style={{ lineHeight: "1.8", marginBottom: "10px" }}>
@@ -171,7 +186,7 @@ export default function OpeningsPage() {
               </a>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <footer style={{ marginTop: "80px", borderTop: "1px solid var(--border-color)", paddingTop: "40px" }}>
