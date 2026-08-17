@@ -1,0 +1,4 @@
+// Automated Ship by Spatial AI
+export function ShippedFeature() {
+  return <div>Shipped to GitHub live at 14:15:26</div>;
+}
