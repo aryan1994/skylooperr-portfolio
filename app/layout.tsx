@@ -6,7 +6,7 @@ import "./globals.css"
 
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const _spaceMono = Space_Mono({
-  weight: ["400", "700"],
+  weight: ["350", "700"],
   subsets: ["latin"],
   variable: "--font-space-mono",
 })
